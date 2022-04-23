@@ -11,7 +11,7 @@ And Chromedrive or Webdrive depending on the browser to be used to perform the a
     https://chromedriver.chromium.org/downloads
 
 
-                                              HOW WORKS RECOVERY PHRASE GEN - BIP 39?
+                                HOW WORKS RECOVERY PHRASE GEN - BIP 39?
                                                                 
 
 This consist a mnemonic phrase thats able to generate a master seed and derive your paths looking up into any Blockchain for associated coins or tokens.
