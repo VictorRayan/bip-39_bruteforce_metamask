@@ -72,7 +72,7 @@ But even so, exchanges still protect their applications even when they only serv
 
 While Metamask in my point of view works as an Open Source API in order to only aim at simplifying a user to manage their tokens without having to program Bip-39 and PBKDF2 to retrieve their information from the Blockchain. Giving up these security aspects.
 
-Then we can exploit them in order to make a brute force attack by the Metmask Extension simulating a user interaction.
+Then we can exploit them in order to make a brute force attack by the Metamask Extension simulating a user interaction.
 
 And how would that work? As I still don't know the details about the Metamask project and its encoding, I can think that they have their own way of forming a master key that is derived from the recovery phrase, which mathematically results in other valid keys for mapping the wallet to retrieve the information from an account on the blockchain correctly, but we don't need to think about the master key part with PBKDF2 and its complexity, we can think that as soon as we have an algorithm that generates valid sentences, we just need to insert it on the Import page Metamask Wallet and then your API will take care of carrying out the other cryptographic operations.
 
