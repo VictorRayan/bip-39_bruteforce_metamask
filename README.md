@@ -81,7 +81,7 @@ In an attacker's view, the problem lies in not "accessing" a wallet, but which w
 If we want to do that, we'll use Python with Automated User Interaction Simulation (Selenium), and with it the valid sentence generation algorithm. As we have 2048^12 entropies to try, i.e. it is estimated that it would take a century with all the computing power of Bitcoin mining, we are going to use pseudo-luck to generate only a very small percentage of this astronomical portion, the Python Random.
 
 The chance of violating the privacy of a really important account is as close to zero as you can still imagine, but we can reduce it by some magnitudes that in terms of the growth in the number of Ethereum users could be worrying depending on the point of view. Getting an equation like this:
-        T = estimated seconds to access a user's first card --> What we really want to know.
+        T = estimated seconds to access a user's first wallet --> What we really want to know.
 
         x = amount of blockchain user whose target cryptocurrency.
 
