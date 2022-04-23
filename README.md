@@ -70,8 +70,6 @@ Almost because this can happens with chance of 1 in (2048^(12 or 24 words) - tar
 
 But even so, exchanges still protect their applications even when they only serve as an API for lay users, not to provide an environment of easy confusion between deprivation of wallets, because there can still be insecurity where you can just put a combination of words and synchronize a whole wallet from a blockchain, where if by chance (or often not by chance) that phrase is the key to deriving someone else's wallet, you can (but shouldn't) steal that person's wallet, or make transfers without consent.
 
-But even so, exchanges like Huobi and Coinbase protect their applications even when they only serve as an API for lay users, not to provide an environment of easy confusion between wallet deprivation, because there can still be insecurity where you can just put a combination of words and syncing an entire wallet from a blockchain, where if one by one (or often not by chance) that phrase is the key to deriving someone else's wallet, you can (but shouldn't) steal that person's wallet , or make transfers without consent.
-
 While Metamask in my point of view works as an Open Source API in order to only aim at simplifying a user to manage their tokens without having to program Bip-39 and PBKDF2 to retrieve their information from the Blockchain. Giving up these security aspects.
 
 Then we can exploit them in order to make a brute force attack by the Metmask Extension simulating a user interaction.
