@@ -61,7 +61,7 @@ ________________________________________________________________________________
             
             
             
-            Now that we understand how recovery phrase generation or also called seed phrase works, let's do an analysis of what we can do with it very quickly.
+            Now that we understand how recovery phrase generation or also called seed phrase words, let's do an analysis of what we can do with it very quickly.
 
 With the a valid seed phrase we can create or accidentally acces a wallet of other people, where we can use the seed phrase to start the process of deriving account keys and wallets, also called account mapping addresses and their wallets.
 
