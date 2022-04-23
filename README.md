@@ -21,7 +21,7 @@ A simple and secure way to recover an account from Blockchain and all your relat
 
 The Seed Phrase is the result of a interation on mathematical algorithm that consists in use the oficial bitcoin dictionary known as "BIP-39 WORDLIST" within 2048 words where will by
 an random entropy (some times, plus a Salt such as password typed by user) will generate a hash and do the checksum process to create and valid a new entropy
-and through this, generate 12 indexes that represents the postion of each word in dictionary to form the seed phrase starting with 0 index until 2047, working in this form:
+and through this, generate 12 indexes that represents the position of each word in dictionary to form the seed phrase starting with 0 index until 2047, working in this form:
 
 
 1 - First we need an entropy (different, unique entropy) between 128 bits and 256 bits as string: 
@@ -45,7 +45,7 @@ word from "BIP-39 WORDLIST":
             ..... ..... ....
            SPLITED_VALID_ENTROPY-BLOCK-12 = ['101101101111']
            
-           each block is formed by every 12 bits in sequence.
+           each block is formed by every 11 bits in sequence.
            
            *we can call the obtained blocks of "word list indices in binary"
       ** This block above isn't a code or programming language, this is only a simple way to convey the idea.
