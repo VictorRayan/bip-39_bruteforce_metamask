@@ -13,7 +13,7 @@ from seedPhraseGen import GenPhrase
 
 
 def LoadBrowser():
-    executable_path = "/home/rayan/anaconda3/chromedrive"
+    executable_path = "/home/rayan/Documents/bip-39_atk_metamask/python/chromedrive"
     os.environ["webdriver.chrome.driver"] = executable_path
 
     chrome_options = Options()
