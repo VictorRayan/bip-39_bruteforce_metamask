@@ -123,6 +123,20 @@ def VerifyPhrase(driver):
 
 df_index=0
 
+'''
+By Default its can be 0, but when you want to continue from last step (execution), 
+open the file 'brute_force_last_step.txt' and see your valor and put it into this variable below
+
+
+    |
+    |
+    |
+    |
+    V
+
+'''
+brute_force_last_step_VALUE = 0
+
 def doBruteForce(REQUIRED_ATTEMPS):
 
     for x in range(REQUIRED_ATTEMPS):
@@ -130,8 +144,8 @@ def doBruteForce(REQUIRED_ATTEMPS):
             driver = LoadBrowser()
         except:
             driver = LoadBrowser()
-        ls_values = GenPhrase(x)
-
+        ls_values = GenPhrase(brute_force_last_step_VALUE + x)
+        
 
         #####
         '''
@@ -158,6 +172,6 @@ def doBruteForce(REQUIRED_ATTEMPS):
         
         #Save the last step in case you want to try again on other mmment where you has stopped
         file_status = open('brute_force_last_step.txt', 'w')
-        file_status.write(str(x))
+        file_status.write(str(brute_force_last_step_VALUE + x))
             
 doBruteForce(1000)
