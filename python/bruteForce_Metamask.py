@@ -13,11 +13,11 @@ from seedPhraseGen import GenPhrase
 
 
 def LoadBrowser():
-    executable_path = "/home/rayan/Documents/bip-39_atk_metamask/python/chromedrive"
+    executable_path = "./chromedrive"
     os.environ["webdriver.chrome.driver"] = executable_path
 
     chrome_options = Options()
-    chrome_options.add_extension('/home/rayan/Downloads/nkbihfbeogaeaoehlefnkodbefgpgknn-10.12.4-www.Crx4Chrome.com.crx')
+    chrome_options.add_extension('./nkbihfbeogaeaoehlefnkodbefgpgknn-10.12.4-www.Crx4Chrome.com.crx')
 
     driver = webdriver.Chrome(executable_path=executable_path, chrome_options=chrome_options)
     driver.get("chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn/home.html#initialize/create-password/import-with-seed-phrase")
@@ -37,25 +37,25 @@ def WordsInjection(driver, ls_values):
     #First, clean all the input fiels to do a new attemp with other sequence (phrase)
     ind_j=0
     for item in ls_values:
-        element=driver.find_element_by_id("import-srp__srp-word-"+str(ind_j))
+        element=driver.find_element("id","import-srp__srp-word-"+str(ind_j))
         element.send_keys(Keys.CONTROL + 'a', Keys.DELETE)
         ind_j=ind_j+1
         
     #do a new attemp
     index=0
     for item in ls_values:
-        element=driver.find_element_by_id("import-srp__srp-word-"+str(index))
+        element=driver.find_element("id","import-srp__srp-word-"+str(index))
         print(item)
         element.send_keys(item)
         index=index+1
         status_for = index
         
 def checkBalance(driver, ls_values):
-    buttonX = driver.find_element_by_css_selector('.popover-wrap')
+    buttonX = driver.find_element("css selector",'.popover-wrap')
     time.sleep(average_waiting_time*2)
     buttonX.click()
     
-    balance_element = driver.find_element_by_css_selector('#app-content > div > div.main-container-wrapper > div > div > div > div.home__balance-wrapper > div > div.wallet-overview__balance > div > div > div > div.eth-overview__primary-container > div > span.currency-display-component__text')
+    balance_element = driver.find_element("css selector",'#app-content > div > div.main-container-wrapper > div > div > div > div.home__balance-wrapper > div > div.wallet-overview__balance > div > div > div > div.eth-overview__primary-container > div > span.currency-display-component__text')
     balance = balance_element.text
     
     
@@ -102,20 +102,20 @@ def VerifyPhrase(driver):
     
     
     
-        inputPass1 = driver.find_element_by_id("password")
-        inputPass2 = driver.find_element_by_id("confirm-password")
-        acceptTerms = driver.find_element_by_xpath('//*[@id="create-new-vault__terms-checkbox"]')
+        inputPass1 = driver.find_element("id","password")
+        inputPass2 = driver.find_element("id","confirm-password")
+        acceptTerms = driver.find_element("xpath",'//*[@id="create-new-vault__terms-checkbox"]')
         
         inputPass1.send_keys(password)
         inputPass2.send_keys(password)
         acceptTerms.click()
         time.sleep(average_waiting_time)
-        buttonImport = driver.find_element_by_xpath('//*[@id="app-content"]/div/div[2]/div/div/div[2]/form/button')
+        buttonImport = driver.find_element("xpath",'//*[@id="app-content"]/div/div[2]/div/div/div[2]/form/button')
         buttonImport.click()
         
         time.sleep(average_waiting_time*10)
     
-        buttonAllDone = driver.find_element_by_css_selector("#app-content > div > div.main-container-wrapper > div > div > button")
+        buttonAllDone = driver.find_element("css selector","#app-content > div > div.main-container-wrapper > div > div > button")
         buttonAllDone.click()
         
         checkBalance(driver, ls_values)
